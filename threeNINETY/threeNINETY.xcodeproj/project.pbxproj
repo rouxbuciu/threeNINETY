@@ -8,22 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		12E8D4C61DFF43F6006BE516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */; };
-		12E8D4C81DFF43F6006BE516 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4C71DFF43F6006BE516 /* ViewController.swift */; };
 		12E8D4CB1DFF43F6006BE516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E8D4C91DFF43F6006BE516 /* Main.storyboard */; };
 		12E8D4CE1DFF43F6006BE516 /* threeNINETY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4CC1DFF43F6006BE516 /* threeNINETY.xcdatamodeld */; };
 		12E8D4D01DFF43F6006BE516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E8D4CF1DFF43F6006BE516 /* Assets.xcassets */; };
 		12E8D4D31DFF43F6006BE516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E8D4D11DFF43F6006BE516 /* LaunchScreen.storyboard */; };
+		12E8D4E21DFF491D006BE516 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4E11DFF491D006BE516 /* SWRevealViewController.m */; };
+		12E8D4E41DFF4974006BE516 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4E31DFF4974006BE516 /* MenuVC.swift */; };
+		12E8D4E61DFF4992006BE516 /* HabitTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4E51DFF4992006BE516 /* HabitTrackerVC.swift */; };
+		12E8D4E81DFF49A6006BE516 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4E71DFF49A6006BE516 /* HelpVC.swift */; };
+		12E8D4EA1DFF49B5006BE516 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4E91DFF49B5006BE516 /* AboutVC.swift */; };
+		12E8D4EC1DFF49F9006BE516 /* HabitDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */; };
+		12E8D4EE1DFF4A0C006BE516 /* HabitListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4ED1DFF4A0C006BE516 /* HabitListVC.swift */; };
+		12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12E8D4C21DFF43F6006BE516 /* threeNINETY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threeNINETY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12E8D4C71DFF43F6006BE516 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12E8D4CA1DFF43F6006BE516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12E8D4CD1DFF43F6006BE516 /* threeNINETY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = threeNINETY.xcdatamodel; sourceTree = "<group>"; };
 		12E8D4CF1DFF43F6006BE516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12E8D4D21DFF43F6006BE516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12E8D4D41DFF43F6006BE516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12E8D4DF1DFF491C006BE516 /* threeNINETY-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "threeNINETY-Bridging-Header.h"; sourceTree = "<group>"; };
+		12E8D4E01DFF491D006BE516 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		12E8D4E11DFF491D006BE516 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		12E8D4E31DFF4974006BE516 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		12E8D4E51DFF4992006BE516 /* HabitTrackerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTrackerVC.swift; sourceTree = "<group>"; };
+		12E8D4E71DFF49A6006BE516 /* HelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		12E8D4E91DFF49B5006BE516 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsVC.swift; sourceTree = "<group>"; };
+		12E8D4ED1DFF4A0C006BE516 /* HabitListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListVC.swift; sourceTree = "<group>"; };
+		12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSwipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +72,11 @@
 		12E8D4C41DFF43F6006BE516 /* threeNINETY */ = {
 			isa = PBXGroup;
 			children = (
+				12E8D4DA1DFF475E006BE516 /* Model */,
+				12E8D4DB1DFF4764006BE516 /* View */,
+				12E8D4DC1DFF4768006BE516 /* Controller */,
+				12E8D4DD1DFF476E006BE516 /* Resources */,
 				12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */,
-				12E8D4C71DFF43F6006BE516 /* ViewController.swift */,
 				12E8D4C91DFF43F6006BE516 /* Main.storyboard */,
 				12E8D4CF1DFF43F6006BE516 /* Assets.xcassets */,
 				12E8D4D11DFF43F6006BE516 /* LaunchScreen.storyboard */,
@@ -65,6 +84,68 @@
 				12E8D4CC1DFF43F6006BE516 /* threeNINETY.xcdatamodeld */,
 			);
 			path = threeNINETY;
+			sourceTree = "<group>";
+		};
+		12E8D4DA1DFF475E006BE516 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		12E8D4DB1DFF4764006BE516 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		12E8D4DC1DFF4768006BE516 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4EF1DFF4A1C006BE516 /* Main App Screens */,
+				12E8D4F01DFF4A31006BE516 /* Secondary App Screens */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		12E8D4DD1DFF476E006BE516 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4DE1DFF477D006BE516 /* SWRevealController */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		12E8D4DE1DFF477D006BE516 /* SWRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4E01DFF491D006BE516 /* SWRevealViewController.h */,
+				12E8D4E11DFF491D006BE516 /* SWRevealViewController.m */,
+				12E8D4DF1DFF491C006BE516 /* threeNINETY-Bridging-Header.h */,
+			);
+			name = SWRevealController;
+			sourceTree = "<group>";
+		};
+		12E8D4EF1DFF4A1C006BE516 /* Main App Screens */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4E51DFF4992006BE516 /* HabitTrackerVC.swift */,
+				12E8D4ED1DFF4A0C006BE516 /* HabitListVC.swift */,
+				12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */,
+			);
+			name = "Main App Screens";
+			sourceTree = "<group>";
+		};
+		12E8D4F01DFF4A31006BE516 /* Secondary App Screens */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4E91DFF49B5006BE516 /* AboutVC.swift */,
+				12E8D4E71DFF49A6006BE516 /* HelpVC.swift */,
+				12E8D4E31DFF4974006BE516 /* MenuVC.swift */,
+				12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */,
+			);
+			name = "Secondary App Screens";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +181,7 @@
 					12E8D4C11DFF43F6006BE516 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8DD4C7KK4P;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,9 +222,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12E8D4C81DFF43F6006BE516 /* ViewController.swift in Sources */,
+				12E8D4EA1DFF49B5006BE516 /* AboutVC.swift in Sources */,
 				12E8D4CE1DFF43F6006BE516 /* threeNINETY.xcdatamodeld in Sources */,
+				12E8D4E41DFF4974006BE516 /* MenuVC.swift in Sources */,
 				12E8D4C61DFF43F6006BE516 /* AppDelegate.swift in Sources */,
+				12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */,
+				12E8D4E81DFF49A6006BE516 /* HelpVC.swift in Sources */,
+				12E8D4E21DFF491D006BE516 /* SWRevealViewController.m in Sources */,
+				12E8D4EC1DFF49F9006BE516 /* HabitDetailsVC.swift in Sources */,
+				12E8D4EE1DFF4A0C006BE516 /* HabitListVC.swift in Sources */,
+				12E8D4E61DFF4992006BE516 /* HabitTrackerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,11 +354,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8DD4C7KK4P;
 				INFOPLIST_FILE = threeNINETY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acmelabs.threeNINETY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "threeNINETY/threeNINETY-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -278,11 +370,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8DD4C7KK4P;
 				INFOPLIST_FILE = threeNINETY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acmelabs.threeNINETY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "threeNINETY/threeNINETY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -306,6 +400,7 @@
 				12E8D4D91DFF43F6006BE516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
