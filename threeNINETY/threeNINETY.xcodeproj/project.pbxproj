@@ -20,6 +20,8 @@
 		12E8D4EC1DFF49F9006BE516 /* HabitDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */; };
 		12E8D4EE1DFF4A0C006BE516 /* HabitListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4ED1DFF4A0C006BE516 /* HabitListVC.swift */; };
 		12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */; };
+		12E8D4FA1DFF609D006BE516 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */; };
+		12E8D4FD1DFF60DF006BE516 /* menuButtonIsPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsVC.swift; sourceTree = "<group>"; };
 		12E8D4ED1DFF4A0C006BE516 /* HabitListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListVC.swift; sourceTree = "<group>"; };
 		12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSwipeVC.swift; sourceTree = "<group>"; };
+		12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
+		12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuButtonIsPressed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		12E8D4DA1DFF475E006BE516 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 		12E8D4DC1DFF4768006BE516 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				12E8D4FB1DFF60C4006BE516 /* UI Controllers */,
 				12E8D4EF1DFF4A1C006BE516 /* Main App Screens */,
 				12E8D4F01DFF4A31006BE516 /* Secondary App Screens */,
 			);
@@ -146,6 +152,14 @@
 				12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */,
 			);
 			name = "Secondary App Screens";
+			sourceTree = "<group>";
+		};
+		12E8D4FB1DFF60C4006BE516 /* UI Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */,
+			);
+			name = "UI Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +239,12 @@
 				12E8D4EA1DFF49B5006BE516 /* AboutVC.swift in Sources */,
 				12E8D4CE1DFF43F6006BE516 /* threeNINETY.xcdatamodeld in Sources */,
 				12E8D4E41DFF4974006BE516 /* MenuVC.swift in Sources */,
+				12E8D4FD1DFF60DF006BE516 /* menuButtonIsPressed.swift in Sources */,
 				12E8D4C61DFF43F6006BE516 /* AppDelegate.swift in Sources */,
 				12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */,
 				12E8D4E81DFF49A6006BE516 /* HelpVC.swift in Sources */,
 				12E8D4E21DFF491D006BE516 /* SWRevealViewController.m in Sources */,
+				12E8D4FA1DFF609D006BE516 /* CONSTANTS.swift in Sources */,
 				12E8D4EC1DFF49F9006BE516 /* HabitDetailsVC.swift in Sources */,
 				12E8D4EE1DFF4A0C006BE516 /* HabitListVC.swift in Sources */,
 				12E8D4E61DFF4992006BE516 /* HabitTrackerVC.swift in Sources */,
