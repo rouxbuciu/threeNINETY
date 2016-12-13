@@ -21,6 +21,10 @@ class MenuVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func buttonsResetMenuConstant(_ sender: UIButton) {
+        
+        MENU_IS_OPEN = false
+    }
 
     /*
     // MARK: - Navigation

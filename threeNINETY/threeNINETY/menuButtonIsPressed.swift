@@ -5,30 +5,30 @@
 //  Created by roux g. buciu on 2016-12-12.
 //  Copyright © 2016 ACME Labs. All rights reserved.
 //
-/*
+
+
 import Foundation
 
-func menuButtonIsPressed(menuButton: UIButton) {
+func menuButtonIsPressed(menuButton: UIButton, incomingViewController vc: UIViewController) {
     
     if MENU_IS_OPEN {
-        if self.revealViewController() != nil {
-            self.revealViewController().setFrontViewPosition(.left, animated: true)
+        if vc.revealViewController() != nil {
+            vc.revealViewController().setFrontViewPosition(.left, animated: true)
         }
         
-        self.menuButton.transform = self.menuButton.transform.rotated(by: CGFloat(M_PI_2))
+        menuButton.transform = menuButton.transform.rotated(by: CGFloat(M_PI_2))
         
         MENU_IS_OPEN = false
         
     } else {
-        if self.revealViewController() != nil {
-            self.revealViewController().setFrontViewPosition(.right, animated: true)
-            self.revealViewController().rearViewRevealWidth = 160
+        if vc.revealViewController() != nil {
+            vc.revealViewController().setFrontViewPosition(.right, animated: true)
+            vc.revealViewController().rearViewRevealWidth = 160
         }
         
-        self.menuButton.transform = self.menuButton.transform.rotated(by: CGFloat(M_PI_2))
+        menuButton.transform = menuButton.transform.rotated(by: CGFloat(M_PI_2))
         
         
         MENU_IS_OPEN = true
     }
-    
-}*/
+}

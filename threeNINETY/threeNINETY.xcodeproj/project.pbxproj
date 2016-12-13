@@ -22,6 +22,7 @@
 		12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */; };
 		12E8D4FA1DFF609D006BE516 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */; };
 		12E8D4FD1DFF60DF006BE516 /* menuButtonIsPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */; };
+		12E8D4FF1DFF7F85006BE516 /* HabitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4FE1DFF7F85006BE516 /* HabitListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSwipeVC.swift; sourceTree = "<group>"; };
 		12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
 		12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuButtonIsPressed.swift; sourceTree = "<group>"; };
+		12E8D4FE1DFF7F85006BE516 /* HabitListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				12E8D4E51DFF4992006BE516 /* HabitTrackerVC.swift */,
 				12E8D4ED1DFF4A0C006BE516 /* HabitListVC.swift */,
 				12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */,
+				12E8D4FE1DFF7F85006BE516 /* HabitListCell.swift */,
 			);
 			name = "Main App Screens";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				12E8D4CE1DFF43F6006BE516 /* threeNINETY.xcdatamodeld in Sources */,
 				12E8D4E41DFF4974006BE516 /* MenuVC.swift in Sources */,
 				12E8D4FD1DFF60DF006BE516 /* menuButtonIsPressed.swift in Sources */,
+				12E8D4FF1DFF7F85006BE516 /* HabitListCell.swift in Sources */,
 				12E8D4C61DFF43F6006BE516 /* AppDelegate.swift in Sources */,
 				12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */,
 				12E8D4E81DFF49A6006BE516 /* HelpVC.swift in Sources */,

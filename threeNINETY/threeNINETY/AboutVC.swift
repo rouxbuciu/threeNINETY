@@ -10,6 +10,9 @@ import UIKit
 
 class AboutVC: UIViewController {
 
+    @IBOutlet weak var menuButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,11 @@ class AboutVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
+        
+        menuButtonIsPressed(menuButton: sender, incomingViewController: self)
     }
     
 

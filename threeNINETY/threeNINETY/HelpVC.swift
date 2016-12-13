@@ -9,6 +9,9 @@
 import UIKit
 
 class HelpVC: UIViewController {
+    
+    
+    @IBOutlet weak var menuButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,10 @@ class HelpVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
+        
+        menuButtonIsPressed(menuButton: sender, incomingViewController: self)
+    }
 
     /*
     // MARK: - Navigation

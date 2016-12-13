@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,8 +46,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MY-Ol-xpI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knq-rP-BPt">
+                                        <rect key="frame" x="15" y="42" width="29" height="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.29411764709999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Knq-rP-BPt" secondAttribute="bottom" id="2Yj-2O-zPG"/>
+                                    <constraint firstItem="Knq-rP-BPt" firstAttribute="leading" secondItem="0MY-Ol-xpI" secondAttribute="leading" constant="15" id="4As-C5-Azl"/>
                                     <constraint firstAttribute="height" constant="60" id="fWj-SE-ZtX"/>
                                 </constraints>
                             </view>
@@ -73,7 +84,8 @@
                                                     <constraint firstAttribute="width" constant="253" id="lMc-7X-W4G"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="MlC-h6-2bo" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="uFQ-tx-fYS"/>
+                                                    <action selector="buttonsResetMenuConstant:" destination="BxA-GU-DtO" eventType="touchUpInside" id="JWp-ZN-T3S"/>
+                                                    <segue destination="MlC-h6-2bo" kind="custom" identifier="HabitTrackerVC" customClass="SWRevealViewControllerSeguePushController" id="uFQ-tx-fYS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -106,7 +118,8 @@
                                                     <constraint firstAttribute="width" constant="253" id="kHh-3D-Ylj"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="XJq-4C-fMs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="AF6-Xa-62H"/>
+                                                    <action selector="buttonsResetMenuConstant:" destination="BxA-GU-DtO" eventType="touchUpInside" id="yeN-6h-u09"/>
+                                                    <segue destination="XJq-4C-fMs" kind="custom" identifier="HelpVC" customClass="SWRevealViewControllerSeguePushController" id="AF6-Xa-62H"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -150,7 +163,8 @@
                                                     <constraint firstAttribute="width" constant="253" id="pns-aI-UlK"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="P5u-et-qaF" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3Z6-ek-PS0"/>
+                                                    <action selector="buttonsResetMenuConstant:" destination="BxA-GU-DtO" eventType="touchUpInside" id="kMa-3b-t1r"/>
+                                                    <segue destination="P5u-et-qaF" kind="custom" identifier="AboutVC" customClass="SWRevealViewControllerSeguePushController" id="3Z6-ek-PS0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -244,6 +258,9 @@
                                             <constraint firstAttribute="height" constant="23" id="ond-BM-ovg"/>
                                         </constraints>
                                         <state key="normal" image="MenuButton"/>
+                                        <connections>
+                                            <action selector="menuButtonPressed:" destination="XJq-4C-fMs" eventType="touchUpInside" id="Goh-m5-7jJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.29411764709999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -257,7 +274,32 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BD0-rh-uJN">
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-lC-k2w">
+                                        <rect key="frame" x="25" y="15" width="325" height="440"/>
+                                        <mutableString key="text">Big changes come from small steps.
+
+Recent research has conclusively shown that the key to creating new habits or breaking old ones succeeds based on three points:
+
+- Focus: working on no more than three habits at a time
+- Daily repetition: engaging in the habit at least once a day
+- Time to automation: working on the habit long enough for it to turn into an automatic habit
+
+threeNINETY adopts this approach on habits and forces you to focus on a three or fewer habits you want to create or break for yourself. By focusing on just three habits for ninety days, you empower your self to succeed and significantly increase your chances of success! By encouraging you to engage in the habit daily, you can focus an really making sure you hit the goals you set for yourself. Finally, one you start tracking a habit, it’ll track how well you’re doing for 90 days.
+
+There’s certainly days where you have to take a break. threeNINETY allows you to skip a habit as well, simply by long-pressing on the habit in question. 
+</mutableString>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ojq-lC-k2w" firstAttribute="leading" secondItem="BD0-rh-uJN" secondAttribute="leading" constant="25" id="VK4-jk-HTt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ojq-lC-k2w" secondAttribute="trailing" constant="25" id="WQl-jk-oNz"/>
+                                    <constraint firstItem="Ojq-lC-k2w" firstAttribute="top" secondItem="BD0-rh-uJN" secondAttribute="top" constant="15" id="jYt-gt-bIg"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -274,6 +316,9 @@
                             <constraint firstItem="Eul-CB-gUq" firstAttribute="top" secondItem="0ed-aH-sSF" secondAttribute="bottom" id="xw8-a6-AAJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menuButton" destination="eBm-Hl-8FE" id="Eqm-9e-0jc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvI-H9-EfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,7 +332,7 @@
                         <viewControllerLayoutGuide type="top" id="onk-A3-I3J"/>
                         <viewControllerLayoutGuide type="bottom" id="Tou-oS-NuI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SWS-rB-H7A" customClass="About">
+                    <view key="view" contentMode="scaleToFill" id="SWS-rB-H7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -329,6 +374,9 @@
                                             <constraint firstAttribute="width" constant="23" id="LQt-g8-Ouf"/>
                                         </constraints>
                                         <state key="normal" image="MenuButton"/>
+                                        <connections>
+                                            <action selector="menuButtonPressed:" destination="P5u-et-qaF" eventType="touchUpInside" id="0L9-Jx-3YA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.29411764709999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -372,6 +420,9 @@
                             <constraint firstItem="oc2-Ip-JrA" firstAttribute="top" secondItem="ReY-ji-LuH" secondAttribute="bottom" id="znA-rx-WdY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menuButton" destination="mTt-4h-K4q" id="tp7-me-Wau"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2R-mM-jNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,6 +570,9 @@
                                             <constraint firstAttribute="height" constant="23" id="kmJ-kd-8rj"/>
                                         </constraints>
                                         <state key="normal" image="MenuButton"/>
+                                        <connections>
+                                            <action selector="menuButtonPressed:" destination="2RJ-uC-Uhh" eventType="touchUpInside" id="HfV-bY-Q1v"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.29411764709999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -537,25 +591,88 @@
                                     <constraint firstAttribute="height" constant="25" id="l7n-cl-x6L"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3i8-Iy-d3K">
-                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3i8-Iy-d3K">
+                                <rect key="frame" x="0.0" y="85" width="375" height="452"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HabitListCell" rowHeight="66" id="gUe-ve-qKg" customClass="HabitListCell" customModule="threeNINETY" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gUe-ve-qKg" id="Ot0-wX-bAi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice Piano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv5-mK-x8R">
+                                                    <rect key="frame" x="27" y="8" width="87" height="25"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-yp-fcq">
+                                                    <rect key="frame" x="45" y="32" width="284" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-1W-lhx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="94" id="AN3-DS-TVF"/>
+                                                                <constraint firstAttribute="height" constant="21" id="mEd-ac-cYq"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, December 15, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Kk-1ZY">
+                                                            <rect key="frame" x="94" y="0.0" width="190" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="190" id="cG7-tP-97p"/>
+                                                                <constraint firstAttribute="height" constant="21" id="xdk-hB-CUq"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bWT-yp-fcq" firstAttribute="centerX" secondItem="Ot0-wX-bAi" secondAttribute="centerX" id="3qu-IK-4iX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bWT-yp-fcq" secondAttribute="bottom" constant="5" id="Gzn-Yq-bot"/>
+                                                <constraint firstItem="cv5-mK-x8R" firstAttribute="leading" secondItem="Ot0-wX-bAi" secondAttribute="leadingMargin" constant="19" id="PBC-Fv-SAK"/>
+                                                <constraint firstItem="cv5-mK-x8R" firstAttribute="top" secondItem="Ot0-wX-bAi" secondAttribute="topMargin" id="hve-Re-Ugy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.20784313730000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8u-Ho-zUK">
+                                <rect key="frame" x="0.0" y="537" width="375" height="130"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Nq1-eE-gpJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yi3-P9-qo7" firstAttribute="leading" secondItem="rhW-8o-JuX" secondAttribute="leading" id="DD8-HT-KF5"/>
-                            <constraint firstItem="e9m-67-yXI" firstAttribute="top" secondItem="3i8-Iy-d3K" secondAttribute="bottom" id="EK1-eh-H4t"/>
+                            <constraint firstAttribute="trailing" secondItem="z8u-Ho-zUK" secondAttribute="trailing" id="E2q-6P-yW3"/>
                             <constraint firstItem="HMk-6H-ONc" firstAttribute="top" secondItem="yi3-P9-qo7" secondAttribute="bottom" id="PFe-PB-Yvq"/>
+                            <constraint firstItem="e9m-67-yXI" firstAttribute="top" secondItem="z8u-Ho-zUK" secondAttribute="bottom" id="Ppq-sc-EOc"/>
                             <constraint firstAttribute="trailing" secondItem="3i8-Iy-d3K" secondAttribute="trailing" id="QT9-qJ-ua1"/>
                             <constraint firstItem="3i8-Iy-d3K" firstAttribute="top" secondItem="HMk-6H-ONc" secondAttribute="bottom" id="dbZ-hm-IXE"/>
                             <constraint firstItem="yi3-P9-qo7" firstAttribute="top" secondItem="rhW-8o-JuX" secondAttribute="top" id="ek7-7m-JLU"/>
+                            <constraint firstItem="z8u-Ho-zUK" firstAttribute="leading" secondItem="rhW-8o-JuX" secondAttribute="leading" id="gfL-5G-iYo"/>
                             <constraint firstAttribute="trailing" secondItem="yi3-P9-qo7" secondAttribute="trailing" id="idU-V6-38z"/>
+                            <constraint firstItem="z8u-Ho-zUK" firstAttribute="top" secondItem="3i8-Iy-d3K" secondAttribute="bottom" id="jQk-2r-P3K"/>
                             <constraint firstAttribute="trailing" secondItem="HMk-6H-ONc" secondAttribute="trailing" id="kZB-9O-Iye"/>
                             <constraint firstItem="HMk-6H-ONc" firstAttribute="leading" secondItem="rhW-8o-JuX" secondAttribute="leading" id="tTX-3W-Te8"/>
                             <constraint firstItem="3i8-Iy-d3K" firstAttribute="leading" secondItem="rhW-8o-JuX" secondAttribute="leading" id="ydR-xx-XRi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menuButton" destination="W7P-Mb-fFX" id="d00-zs-3Bu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pia-M5-MH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
