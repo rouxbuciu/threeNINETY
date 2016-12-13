@@ -23,6 +23,7 @@
 		12E8D4FA1DFF609D006BE516 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */; };
 		12E8D4FD1DFF60DF006BE516 /* menuButtonIsPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */; };
 		12E8D4FF1DFF7F85006BE516 /* HabitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4FE1DFF7F85006BE516 /* HabitListCell.swift */; };
+		12E8D5011DFF80D0006BE516 /* CircleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D5001DFF80D0006BE516 /* CircleButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		12E8D4F91DFF609D006BE516 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
 		12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuButtonIsPressed.swift; sourceTree = "<group>"; };
 		12E8D4FE1DFF7F85006BE516 /* HabitListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListCell.swift; sourceTree = "<group>"; };
+		12E8D5001DFF80D0006BE516 /* CircleButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */,
+				12E8D5001DFF80D0006BE516 /* CircleButtons.swift */,
 			);
 			name = "UI Controllers";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				12E8D4F21DFF4A99006BE516 /* PageSwipeVC.swift in Sources */,
 				12E8D4E81DFF49A6006BE516 /* HelpVC.swift in Sources */,
 				12E8D4E21DFF491D006BE516 /* SWRevealViewController.m in Sources */,
+				12E8D5011DFF80D0006BE516 /* CircleButtons.swift in Sources */,
 				12E8D4FA1DFF609D006BE516 /* CONSTANTS.swift in Sources */,
 				12E8D4EC1DFF49F9006BE516 /* HabitDetailsVC.swift in Sources */,
 				12E8D4EE1DFF4A0C006BE516 /* HabitListVC.swift in Sources */,
@@ -383,6 +387,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "threeNINETY/threeNINETY-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -398,6 +403,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "threeNINETY/threeNINETY-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

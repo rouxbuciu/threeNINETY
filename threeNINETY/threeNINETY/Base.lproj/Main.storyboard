@@ -48,8 +48,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knq-rP-BPt">
-                                        <rect key="frame" x="15" y="42" width="29" height="18"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="13"/>
+                                        <rect key="frame" x="15" y="36.5" width="37.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -85,7 +85,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <action selector="buttonsResetMenuConstant:" destination="BxA-GU-DtO" eventType="touchUpInside" id="JWp-ZN-T3S"/>
-                                                    <segue destination="MlC-h6-2bo" kind="custom" identifier="HabitTrackerVC" customClass="SWRevealViewControllerSeguePushController" id="uFQ-tx-fYS"/>
+                                                    <segue destination="MlC-h6-2bo" kind="custom" identifier="HabitTrackerVCSegue" customClass="SWRevealViewControllerSeguePushController" id="uFQ-tx-fYS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -136,16 +136,19 @@
                                         <rect key="frame" x="0.0" y="542" width="375" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzY-Fc-szX">
-                                                <rect key="frame" x="17" y="14" width="97" height="22"/>
+                                                <rect key="frame" x="17" y="14" width="100" height="22"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About ACME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1C-Ae-1US">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="Or8-T7-AxH"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgq-cq-uvI">
-                                                        <rect key="frame" x="69.5" y="0.0" width="27.5" height="22"/>
+                                                        <rect key="frame" x="70" y="0.0" width="30" height="22"/>
                                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -153,7 +156,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="psl-Hl-u15"/>
-                                                    <constraint firstAttribute="width" constant="97" id="veG-Vu-I4u"/>
+                                                    <constraint firstAttribute="width" constant="100" id="veG-Vu-I4u"/>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-FC-cAu">
@@ -275,30 +278,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BD0-rh-uJN">
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-lC-k2w">
-                                        <rect key="frame" x="25" y="15" width="325" height="440"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fqB-6N-oqU">
+                                        <rect key="frame" x="8" y="8" width="359" height="566"/>
                                         <mutableString key="text">Big changes come from small steps.
 
-Recent research has conclusively shown that the key to creating new habits or breaking old ones succeeds based on three points:
+Recent research has conclusively shown that the key to creating new habits or breaking old ones is based on three controllable pillars:
 
 - Focus: working on no more than three habits at a time
-- Daily repetition: engaging in the habit at least once a day
-- Time to automation: working on the habit long enough for it to turn into an automatic habit
+- Daily repetition: engaging in the habit at least once a day, if not more often
+- Time to automation: working on the habit long enough (about 90 days) for it to turn into an automatic habit
 
-threeNINETY adopts this approach on habits and forces you to focus on a three or fewer habits you want to create or break for yourself. By focusing on just three habits for ninety days, you empower your self to succeed and significantly increase your chances of success! By encouraging you to engage in the habit daily, you can focus an really making sure you hit the goals you set for yourself. Finally, one you start tracking a habit, it’ll track how well you’re doing for 90 days.
+threeNINETY adopts this approach to habits and forces you to focus on three or fewer habits you want to create or break for yourself. By focusing on just three habits for ninety days, you empower yourself to succeed and significantly increase your chances of creating a lifelong habit! By encouraging you to engage in the habit daily, you can free yourself from cumbersome tracking methons and focus on really making sure you hit the goals you set for yourself. Finally, if you fail to hit those goals, threeNINETY is there to help you start from scratch!
 
-There’s certainly days where you have to take a break. threeNINETY allows you to skip a habit as well, simply by long-pressing on the habit in question. 
-</mutableString>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+There’s certainly days where you have to take a break. threeNINETY allows you to skip a habit as well, simply by long-pressing on the habit in question.
+
+“We are what we repeatedly do.
+         Excellence, then, is not an act, but a habit.”
+				-Aristotle.</mutableString>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Ojq-lC-k2w" firstAttribute="leading" secondItem="BD0-rh-uJN" secondAttribute="leading" constant="25" id="VK4-jk-HTt"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ojq-lC-k2w" secondAttribute="trailing" constant="25" id="WQl-jk-oNz"/>
-                                    <constraint firstItem="Ojq-lC-k2w" firstAttribute="top" secondItem="BD0-rh-uJN" secondAttribute="top" constant="15" id="jYt-gt-bIg"/>
+                                    <constraint firstAttribute="trailing" secondItem="fqB-6N-oqU" secondAttribute="trailing" constant="8" id="1Ei-5o-7K7"/>
+                                    <constraint firstItem="fqB-6N-oqU" firstAttribute="top" secondItem="BD0-rh-uJN" secondAttribute="top" constant="8" id="P2F-Mp-8Q0"/>
+                                    <constraint firstAttribute="bottom" secondItem="fqB-6N-oqU" secondAttribute="bottom" constant="8" id="k0h-kt-iWG"/>
+                                    <constraint firstItem="fqB-6N-oqU" firstAttribute="leading" secondItem="BD0-rh-uJN" secondAttribute="leading" constant="8" id="ssi-DJ-cr6"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -322,7 +329,7 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvI-H9-EfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272.80000000000001" y="-335.08245877061472"/>
+            <point key="canvasLocation" x="271.875" y="-335.91549295774649"/>
         </scene>
         <!--AboutVC-->
         <scene sceneID="hCX-Z7-yV6">
@@ -398,11 +405,30 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                                             <constraint firstAttribute="height" constant="122" id="pB6-Y7-8YJ"/>
                                         </constraints>
                                     </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7VZ-MY-t9f">
+                                        <rect key="frame" x="8" y="187" width="359" height="387"/>
+                                        <string key="text">Here at ACME Labs, we strive to make applications that are not just beautiful but also add value and enhance your quality of life. From cycling to habits, our product line is designed for the modern person on the go.
+
+If you have any questions or comments, or suggestions, please forward them to roux@acmelabs.ca.
+
+
+threeNINETY v1.0
+
+
+threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="7VZ-MY-t9f" firstAttribute="leading" secondItem="WaD-sJ-Rfk" secondAttribute="leading" constant="8" id="6kc-fB-IgW"/>
                                     <constraint firstItem="8Pv-j3-dXo" firstAttribute="top" secondItem="WaD-sJ-Rfk" secondAttribute="top" constant="25" id="OCb-hj-gcB"/>
+                                    <constraint firstItem="7VZ-MY-t9f" firstAttribute="top" secondItem="8Pv-j3-dXo" secondAttribute="bottom" constant="40" id="PwK-79-Duk"/>
+                                    <constraint firstAttribute="trailing" secondItem="7VZ-MY-t9f" secondAttribute="trailing" constant="8" id="Uyb-vF-eTA"/>
                                     <constraint firstItem="8Pv-j3-dXo" firstAttribute="centerX" secondItem="WaD-sJ-Rfk" secondAttribute="centerX" id="cWk-XR-C4O"/>
+                                    <constraint firstAttribute="bottom" secondItem="7VZ-MY-t9f" secondAttribute="bottom" constant="8" id="eh5-15-HWp"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -426,7 +452,7 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2R-mM-jNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378.39999999999998" y="832.53373313343332"/>
+            <point key="canvasLocation" x="-463.19999999999999" y="863.1184407796103"/>
         </scene>
         <!--Page SwipeVC-->
         <scene sceneID="xho-Ml-Xfe">
@@ -502,7 +528,19 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBw-BN-OG3">
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to add a habit..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eog-nY-Xr0">
+                                        <rect key="frame" x="111" y="279.5" width="154" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="eog-nY-Xr0" firstAttribute="centerY" secondItem="hBw-BN-OG3" secondAttribute="centerY" id="1zD-9q-mI2"/>
+                                    <constraint firstItem="eog-nY-Xr0" firstAttribute="centerX" secondItem="hBw-BN-OG3" secondAttribute="centerX" id="X9E-Bh-GXW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -525,7 +563,7 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2t-9N-dwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="326.98650674662673"/>
+            <point key="canvasLocation" x="975" y="326.40845070422534"/>
         </scene>
         <!--Habit ListVC-->
         <scene sceneID="mOG-vV-xgk">
@@ -609,12 +647,12 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-yp-fcq">
-                                                    <rect key="frame" x="45" y="32" width="284" height="21"/>
+                                                    <rect key="frame" x="51.5" y="32" width="273" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-1W-lhx">
-                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="21"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="94" id="AN3-DS-TVF"/>
+                                                                <constraint firstAttribute="width" constant="90" id="AN3-DS-TVF"/>
                                                                 <constraint firstAttribute="height" constant="21" id="mEd-ac-cYq"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
@@ -622,9 +660,9 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, December 15, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Kk-1ZY">
-                                                            <rect key="frame" x="94" y="0.0" width="190" height="21"/>
+                                                            <rect key="frame" x="90" y="0.0" width="183" height="21"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="190" id="cG7-tP-97p"/>
+                                                                <constraint firstAttribute="width" constant="183" id="cG7-tP-97p"/>
                                                                 <constraint firstAttribute="height" constant="21" id="xdk-hB-CUq"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
@@ -642,14 +680,32 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.34509803919999998" green="0.20784313730000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="habitTitle" destination="cv5-mK-x8R" id="fcj-zm-fTg"/>
+                                            <outlet property="lastCompletionDate" destination="X9g-Kk-1ZY" id="aPf-pz-dIL"/>
+                                            <segue destination="gSX-mB-Cju" kind="show" identifier="HabitDetailsVC" action="showDetailViewController:sender:" id="CVx-gT-ElS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8u-Ho-zUK">
                                 <rect key="frame" x="0.0" y="537" width="375" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF2-H3-YDS" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="35" width="55" height="55"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="KvC-Ms-R5Z"/>
+                                            <constraint firstAttribute="height" constant="55" id="Q2n-hO-0XK"/>
+                                        </constraints>
+                                        <state key="normal" image="Plus"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="Nq1-eE-gpJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FF2-H3-YDS" secondAttribute="bottom" constant="40" id="iGY-wU-dZJ"/>
+                                    <constraint firstItem="FF2-H3-YDS" firstAttribute="centerX" secondItem="z8u-Ho-zUK" secondAttribute="centerX" id="tHg-aX-pxM"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -672,11 +728,12 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                     </view>
                     <connections>
                         <outlet property="menuButton" destination="W7P-Mb-fFX" id="d00-zs-3Bu"/>
+                        <outlet property="tableView" destination="3i8-Iy-d3K" id="ciy-EH-Um2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pia-M5-MH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677.5999999999999" y="326.98650674662673"/>
+            <point key="canvasLocation" x="1676" y="326"/>
         </scene>
         <!--Habit DetailsVC-->
         <scene sceneID="DKA-dK-npm">
@@ -694,7 +751,7 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6N-tc-3nE">
-                                        <rect key="frame" x="130.5" y="25" width="114" height="35"/>
+                                        <rect key="frame" x="131" y="25" width="114" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="three" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-es-W3p">
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="35"/>
@@ -724,14 +781,56 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaE-nz-PaS">
                                 <rect key="frame" x="0.0" y="60" width="375" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUZ-xp-z7k">
+                                        <rect key="frame" x="186" y="2" width="3" height="22"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="8I1-SN-bGn"/>
+                                    <constraint firstItem="AUZ-xp-z7k" firstAttribute="centerX" secondItem="KaE-nz-PaS" secondAttribute="centerX" id="BTt-wT-eNN"/>
+                                    <constraint firstItem="AUZ-xp-z7k" firstAttribute="centerY" secondItem="KaE-nz-PaS" secondAttribute="centerY" id="WDw-RP-Sr1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i05-KN-Fs6">
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-4Z-uWK">
+                                        <rect key="frame" x="124" y="487" width="127" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-21-CAL" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="0vm-lS-ndt"/>
+                                                    <constraint firstAttribute="width" constant="55" id="Nbc-zu-WPG"/>
+                                                </constraints>
+                                                <state key="normal" image="Left"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="gSX-mB-Cju" eventType="touchUpInside" id="vDZ-LL-IZI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHL-Od-3p9" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                                <rect key="frame" x="72" y="0.0" width="55" height="55"/>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="TkN-LR-mM4"/>
+                                                    <constraint firstAttribute="width" constant="55" id="qNq-nB-XP8"/>
+                                                </constraints>
+                                                <state key="normal" image="Edit"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.094117647060000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dBN-4Z-uWK" secondAttribute="bottom" constant="40" id="XVA-dX-Dra"/>
+                                    <constraint firstItem="dBN-4Z-uWK" firstAttribute="centerX" secondItem="i05-KN-Fs6" secondAttribute="centerX" id="ZkS-Ve-2fu"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -748,6 +847,9 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
                             <constraint firstItem="Ume-hX-8s9" firstAttribute="top" secondItem="i05-KN-Fs6" secondAttribute="bottom" id="zlY-1w-Uzi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="habitTitleLabel" destination="AUZ-xp-z7k" id="I0h-oe-iRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAf-4X-lAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -755,7 +857,10 @@ There’s certainly days where you have to take a break. threeNINETY allows you 
         </scene>
     </scenes>
     <resources>
+        <image name="Edit" width="30" height="30"/>
+        <image name="Left" width="50" height="50"/>
         <image name="MenuButton" width="50" height="50"/>
+        <image name="Plus" width="50" height="50"/>
         <image name="logo-for-background" width="624" height="330"/>
     </resources>
     <inferredMetricsTieBreakers>

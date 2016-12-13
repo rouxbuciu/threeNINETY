@@ -10,6 +10,9 @@ import UIKit
 
 class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    var testArray = ["ItemOne", "itemTwo", "ItemThree"]
     
     @IBOutlet weak var menuButton: UIButton!
 
@@ -17,6 +20,10 @@ class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,16 +39,31 @@ class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return testArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HabitListCell", for: indexPath) as! HabitListCell
         
-        return UITableViewCell()
+        cell.habitTitle.text = testArray[indexPath.row]
+        cell.lastCompletionDate.text = testArray[indexPath.row]
+        
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor(red: 88.0/255.0, green: 53.0/255.0, blue: 94.0/255.0, alpha: 1.0)
+        } else {
+            cell.backgroundColor = UIColor(red: 100.00/255.0, green: 89.0/255.0, blue: 134.0/255.0, alpha: 1.0)
+        }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
+        let item = testArray[indexPath.row]
+        performSegue(withIdentifier: "HabitDetailsVC", sender: item)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
@@ -52,14 +74,20 @@ class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "HabitDetailsVC" {
+            if let destination = segue.destination as? HabitDetailsVC {
+                if let item = sender as? String {
+                    destination.habitTitle = item
+                }
+            
+            }
+        }
     }
-    */
+
 
 }

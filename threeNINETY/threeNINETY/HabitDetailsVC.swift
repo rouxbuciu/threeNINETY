@@ -9,11 +9,19 @@
 import UIKit
 
 class HabitDetailsVC: UIViewController {
+    
+    @IBOutlet weak var habitTitleLabel: UILabel!
+    
+    var habitTitle: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        habitTitleLabel.text = habitTitle
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +29,10 @@ class HabitDetailsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

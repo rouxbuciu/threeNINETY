@@ -10,6 +10,10 @@ import UIKit
 
 class HabitListCell: UITableViewCell {
 
+    @IBOutlet weak var habitTitle: UILabel!
+    @IBOutlet weak var lastCompletionDate: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +25,10 @@ class HabitListCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func setupHabitCell(name: String, date: String) {
+        
+        self.habitTitle.text = name
+        self.lastCompletionDate.text = date
+        
+    }
 }
