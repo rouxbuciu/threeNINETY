@@ -61,6 +61,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		127B3A981E0243E900567A4B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4CC1DFF43F6006BE516 /* threeNINETY.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		127B3A991E02440200567A4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4D41DFF43F6006BE516 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		127B3A9A1E02442500567A4B /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		127B3A9B1E02443C00567A4B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				12E8D4C91DFF43F6006BE516 /* Main.storyboard */,
+				12E8D4D11DFF43F6006BE516 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		12E8D4B91DFF43F6006BE516 = {
 			isa = PBXGroup;
 			children = (
@@ -80,16 +113,15 @@
 		12E8D4C41DFF43F6006BE516 /* threeNINETY */ = {
 			isa = PBXGroup;
 			children = (
-				12E8D4DA1DFF475E006BE516 /* Model */,
-				12E8D4DB1DFF4764006BE516 /* View */,
+				127B3A9A1E02442500567A4B /* App Delegate */,
+				127B3A981E0243E900567A4B /* Core Data */,
 				12E8D4DC1DFF4768006BE516 /* Controller */,
+				12E8D4DA1DFF475E006BE516 /* Model */,
 				12E8D4DD1DFF476E006BE516 /* Resources */,
-				12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */,
-				12E8D4C91DFF43F6006BE516 /* Main.storyboard */,
+				127B3A9B1E02443C00567A4B /* Storyboards */,
+				12E8D4DB1DFF4764006BE516 /* View */,
+				127B3A991E02440200567A4B /* Supporting Files */,
 				12E8D4CF1DFF43F6006BE516 /* Assets.xcassets */,
-				12E8D4D11DFF43F6006BE516 /* LaunchScreen.storyboard */,
-				12E8D4D41DFF43F6006BE516 /* Info.plist */,
-				12E8D4CC1DFF43F6006BE516 /* threeNINETY.xcdatamodeld */,
 			);
 			path = threeNINETY;
 			sourceTree = "<group>";
@@ -105,6 +137,7 @@
 		12E8D4DB1DFF4764006BE516 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				12E8D5001DFF80D0006BE516 /* CircleButtons.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -112,9 +145,9 @@
 		12E8D4DC1DFF4768006BE516 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				12E8D4FB1DFF60C4006BE516 /* UI Controllers */,
-				12E8D4EF1DFF4A1C006BE516 /* Main App Screens */,
-				12E8D4F01DFF4A31006BE516 /* Secondary App Screens */,
+				12E8D4FB1DFF60C4006BE516 /* UI Controller */,
+				12E8D4EF1DFF4A1C006BE516 /* Main ViewControllers */,
+				12E8D4F01DFF4A31006BE516 /* Secondary ViewControllers */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -137,7 +170,7 @@
 			name = SWRevealController;
 			sourceTree = "<group>";
 		};
-		12E8D4EF1DFF4A1C006BE516 /* Main App Screens */ = {
+		12E8D4EF1DFF4A1C006BE516 /* Main ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				12E8D4E51DFF4992006BE516 /* HabitTrackerVC.swift */,
@@ -145,10 +178,10 @@
 				12E8D4EB1DFF49F9006BE516 /* HabitDetailsVC.swift */,
 				12E8D4FE1DFF7F85006BE516 /* HabitListCell.swift */,
 			);
-			name = "Main App Screens";
+			name = "Main ViewControllers";
 			sourceTree = "<group>";
 		};
-		12E8D4F01DFF4A31006BE516 /* Secondary App Screens */ = {
+		12E8D4F01DFF4A31006BE516 /* Secondary ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				12E8D4E91DFF49B5006BE516 /* AboutVC.swift */,
@@ -156,16 +189,15 @@
 				12E8D4E31DFF4974006BE516 /* MenuVC.swift */,
 				12E8D4F11DFF4A99006BE516 /* PageSwipeVC.swift */,
 			);
-			name = "Secondary App Screens";
+			name = "Secondary ViewControllers";
 			sourceTree = "<group>";
 		};
-		12E8D4FB1DFF60C4006BE516 /* UI Controllers */ = {
+		12E8D4FB1DFF60C4006BE516 /* UI Controller */ = {
 			isa = PBXGroup;
 			children = (
 				12E8D4FC1DFF60DF006BE516 /* menuButtonIsPressed.swift */,
-				12E8D5001DFF80D0006BE516 /* CircleButtons.swift */,
 			);
-			name = "UI Controllers";
+			name = "UI Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

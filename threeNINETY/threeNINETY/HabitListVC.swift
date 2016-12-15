@@ -8,14 +8,18 @@
 
 import UIKit
 
-class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HabitListVC: UIViewController {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var testArray = ["ItemOne", "itemTwo", "ItemThree"]
-    
     @IBOutlet weak var menuButton: UIButton!
 
+    var testArray = ["ItemOne", "itemTwo", "ItemThree"]
+    
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,47 +30,8 @@ class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    
-    // TABLE VIEW STUFF
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HabitListCell", for: indexPath) as! HabitListCell
-        
-        cell.habitTitle.text = testArray[indexPath.row]
-        cell.lastCompletionDate.text = testArray[indexPath.row]
-        
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor(red: 88.0/255.0, green: 53.0/255.0, blue: 94.0/255.0, alpha: 1.0)
-        } else {
-            cell.backgroundColor = UIColor(red: 100.00/255.0, green: 89.0/255.0, blue: 134.0/255.0, alpha: 1.0)
-        }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        let item = testArray[indexPath.row]
-        performSegue(withIdentifier: "HabitDetailsVC", sender: item)
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    
+    // MARK: - Button Functionality
     
     @IBAction func menuButtonPressed(_ sender: UIButton) {
         
@@ -84,10 +49,51 @@ class HabitListVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 if let item = sender as? String {
                     destination.habitTitle = item
                 }
-            
             }
         }
     }
 
 
+}
+
+
+extension HabitListVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return testArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HabitListCell", for: indexPath) as! HabitListCell
+        
+        cell.habitTitle.text = testArray[indexPath.row]
+        cell.lastCompletionDate.text = testArray[indexPath.row]
+        
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor(red: 88.0/255.0, green: 53.0/255.0, blue: 94.0/255.0, alpha: 1.0)
+        } else {
+            cell.backgroundColor = UIColor(red: 100.00/255.0, green: 89.0/255.0, blue: 134.0/255.0, alpha: 1.0)
+        }
+        
+        return cell
+    }
+    
+}
+
+
+extension HabitListVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let item = testArray[indexPath.row]
+        performSegue(withIdentifier: "HabitDetailsVC", sender: item)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
