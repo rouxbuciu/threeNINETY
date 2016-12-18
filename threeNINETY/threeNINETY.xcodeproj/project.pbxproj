@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		128E23611E04604D007C9382 /* CalendarDayButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E23601E04604D007C9382 /* CalendarDayButtons.swift */; };
+		129A2CD31E072407002EF335 /* CircleButtonTrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A2CD21E072407002EF335 /* CircleButtonTrash.swift */; };
 		12E8D4C61DFF43F6006BE516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */; };
 		12E8D4CB1DFF43F6006BE516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E8D4C91DFF43F6006BE516 /* Main.storyboard */; };
 		12E8D4CE1DFF43F6006BE516 /* threeNINETY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12E8D4CC1DFF43F6006BE516 /* threeNINETY.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		128E23601E04604D007C9382 /* CalendarDayButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayButtons.swift; sourceTree = "<group>"; };
+		129A2CD21E072407002EF335 /* CircleButtonTrash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonTrash.swift; sourceTree = "<group>"; };
 		12E8D4C21DFF43F6006BE516 /* threeNINETY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threeNINETY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12E8D4C51DFF43F6006BE516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12E8D4CA1DFF43F6006BE516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				12E8D5001DFF80D0006BE516 /* CircleButtons.swift */,
+				129A2CD21E072407002EF335 /* CircleButtonTrash.swift */,
 				128E23601E04604D007C9382 /* CalendarDayButtons.swift */,
 			);
 			name = View;
@@ -295,6 +298,7 @@
 			files = (
 				12E8D4EA1DFF49B5006BE516 /* AboutVC.swift in Sources */,
 				12E8D4CE1DFF43F6006BE516 /* threeNINETY.xcdatamodeld in Sources */,
+				129A2CD31E072407002EF335 /* CircleButtonTrash.swift in Sources */,
 				12E8D4E41DFF4974006BE516 /* MenuVC.swift in Sources */,
 				12E8D4FD1DFF60DF006BE516 /* menuButtonIsPressed.swift in Sources */,
 				12E8D4FF1DFF7F85006BE516 /* HabitListCell.swift in Sources */,

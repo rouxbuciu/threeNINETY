@@ -820,7 +820,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-4Z-uWK" userLabel="Bottom Buttons">
                                         <rect key="frame" x="52" y="487" width="271" height="55"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-21-CAL" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-21-CAL" userLabel="Back Button" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -844,7 +844,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                                     <action selector="editButtonPressed:" destination="gSX-mB-Cju" eventType="touchUpInside" id="unU-J0-VHu"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFA-Fe-9bW" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFA-Fe-9bW" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
                                                 <rect key="frame" x="144" y="0.0" width="55" height="55"/>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -856,7 +856,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                                     <action selector="doneEditingHabitButtonPressed:" destination="gSX-mB-Cju" eventType="touchUpInside" id="XjN-xC-t2f"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-ol-lSL" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-ol-lSL" customClass="CircleButtonTrash" customModule="threeNINETY" customModuleProvider="target">
                                                 <rect key="frame" x="216" y="0.0" width="55" height="55"/>
                                                 <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -918,7 +918,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Qj-an-cnf" userLabel="WeekDays Stack">
-                                        <rect key="frame" x="42" y="45" width="291" height="177"/>
+                                        <rect key="frame" x="42" y="45.5" width="291" height="177"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5m-N6-q7m" userLabel="Week1">
                                                 <rect key="frame" x="0.0" y="0.0" width="291" height="27"/>
@@ -1360,7 +1360,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-ht-6kr" userLabel="Details Stack">
-                                        <rect key="frame" x="42" y="281" width="154.5" height="94"/>
+                                        <rect key="frame" x="42" y="281.5" width="154.5" height="94"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DETAILS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0g-aj-Lh7">
                                                 <rect key="frame" x="0.0" y="0.0" width="39" height="19.5"/>
@@ -1450,6 +1450,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="L4p-21-CAL" id="K3x-Tp-tYg"/>
                         <outlet property="deleteHabitButton" destination="GDe-ol-lSL" id="NYw-c1-cc1"/>
                         <outlet property="doneEditingHabitButton" destination="SFA-Fe-9bW" id="GWJ-Tr-9Pa"/>
                         <outlet property="editEntryButton" destination="uHL-Od-3p9" id="mJA-Rv-GFF"/>
@@ -1462,12 +1463,12 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Checkmark" width="50" height="50"/>
+        <image name="Checkmark" width="30" height="30"/>
         <image name="Edit" width="30" height="30"/>
         <image name="Left" width="50" height="50"/>
         <image name="MenuButton" width="50" height="50"/>
         <image name="Plus" width="50" height="50"/>
-        <image name="Trash" width="50" height="50"/>
+        <image name="Trash" width="30" height="30"/>
         <image name="logo-for-background" width="624" height="330"/>
     </resources>
     <inferredMetricsTieBreakers>

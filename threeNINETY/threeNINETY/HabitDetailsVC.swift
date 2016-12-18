@@ -14,18 +14,17 @@ class HabitDetailsVC: UIViewController {
     
     @IBOutlet weak var habitTitleLabel: UILabel!
     
+    @IBOutlet weak var backButton: CircleButtons!
     @IBOutlet weak var editEntryButton: CircleButtons!
-    
     @IBOutlet weak var doneEditingHabitButton: CircleButtons!
-    
-    @IBOutlet weak var deleteHabitButton: CircleButtons!
+    @IBOutlet weak var deleteHabitButton: CircleButtonTrash!
     
     
     // MARK: - Variables
     var habitTitle: String!
     var monthStartingDay: String!
     var buttonArray = [CalendarDayButtons]()
-    var isInEditingMode = false
+    var habitIsInEditingMode = false
     
     
     // TESTING ARRAYS & VARIABLES
@@ -40,6 +39,7 @@ class HabitDetailsVC: UIViewController {
         super.viewDidLoad()
 
         generateTestData()
+        assignActiveLowerButtons()
         stylizeCalendar(date: monthStartingDay)
         habitTitleLabel.text = habitTitle
     
@@ -123,20 +123,36 @@ class HabitDetailsVC: UIViewController {
     
     @IBAction func editButtonPressed(_ sender: CircleButtons) {
         
-        doneEditingHabitButton.isHidden = false
-        deleteHabitButton.isHidden = false
-        editEntryButton.isHidden = true
-        
+        habitIsInEditingMode = true
+        assignActiveLowerButtons()
     }
     
     @IBAction func doneEditingHabitButtonPressed(_ sender: CircleButtons) {
         
-        doneEditingHabitButton.isHidden = true
-        deleteHabitButton.isHidden = true
-        editEntryButton.isHidden = false
+        habitIsInEditingMode = false
+        assignActiveLowerButtons()
     }
     
-    @IBAction func deleteHabitButtonPressed(_ sender: Any) {
+    @IBAction func deleteHabitButtonPressed(_ sender: CircleButtonTrash) {
+        
+    }
+    
+    
+    func assignActiveLowerButtons() {
+        
+        if habitIsInEditingMode {
+            doneEditingHabitButton.isHidden = false
+            deleteHabitButton.isHidden = false
+            editEntryButton.isHidden = true
+            backButton.isHidden = true
+            
+        } else {
+            doneEditingHabitButton.isHidden = true
+            deleteHabitButton.isHidden = true
+            editEntryButton.isHidden = false
+            backButton.isHidden = false
+        }
+        
     }
 
     
