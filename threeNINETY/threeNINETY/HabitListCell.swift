@@ -13,10 +13,11 @@ class HabitListCell: UITableViewCell {
     @IBOutlet weak var habitTitle: UILabel!
     @IBOutlet weak var lastCompletionDate: UILabel!
     
+    // MARK: - View life cycle
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

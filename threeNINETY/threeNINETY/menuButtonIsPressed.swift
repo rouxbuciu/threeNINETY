@@ -9,6 +9,7 @@
 
 import Foundation
 
+// creating menuButton rotation behaviour
 func menuButtonIsPressed(menuButton: UIButton, incomingViewController vc: UIViewController) {
     
     if MENU_IS_OPEN {

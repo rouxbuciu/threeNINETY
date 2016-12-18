@@ -22,8 +22,6 @@ class HabitListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -72,6 +70,8 @@ extension HabitListVC: UITableViewDataSource {
         
         cell.habitTitle.text = testArray[indexPath.row]
         cell.lastCompletionDate.text = testArray[indexPath.row]
+        
+        // Creating two different background types for presentation
         
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(red: 88.0/255.0, green: 53.0/255.0, blue: 94.0/255.0, alpha: 1.0)

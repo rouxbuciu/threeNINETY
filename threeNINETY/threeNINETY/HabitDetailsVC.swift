@@ -10,12 +10,22 @@ import UIKit
 
 class HabitDetailsVC: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var habitTitleLabel: UILabel!
     
+    @IBOutlet weak var editEntryButton: CircleButtons!
     
+    @IBOutlet weak var doneEditingHabitButton: CircleButtons!
+    
+    @IBOutlet weak var deleteHabitButton: CircleButtons!
+    
+    
+    // MARK: - Variables
     var habitTitle: String!
     var monthStartingDay: String!
-    var buttonArary = [CalendarDayButtons]()
+    var buttonArray = [CalendarDayButtons]()
+    var isInEditingMode = false
     
     
     // TESTING ARRAYS & VARIABLES
@@ -24,11 +34,13 @@ class HabitDetailsVC: UIViewController {
     
     
 
+    // MARK: - View life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         generateTestData()
-        createActiveButtonArray(date: monthStartingDay)
+        stylizeCalendar(date: monthStartingDay)
         habitTitleLabel.text = habitTitle
     
     
@@ -43,7 +55,9 @@ class HabitDetailsVC: UIViewController {
     }
     
     
-    func createActiveButtonArray(date: String) {
+    
+    
+    func stylizeCalendar(date: String) {
         var startIndex = 0
         let totalButtons = 136
         var buttonLabelText = 1
@@ -86,7 +100,7 @@ class HabitDetailsVC: UIViewController {
                 }
                 
                 buttonLabelText += 1
-                buttonArary.append(button)
+                createActiveButtonArray(button: button)
                 
             } else {
                 let button = self.view.viewWithTag(x) as! CalendarDayButtons
@@ -96,12 +110,38 @@ class HabitDetailsVC: UIViewController {
         }
     }
     
+    func createActiveButtonArray(button: CalendarDayButtons) {
+        buttonArray.append(button)
+    }
+    
+    // MARK: - Button functions
     
     @IBAction func backButton(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func editButtonPressed(_ sender: CircleButtons) {
+        
+        doneEditingHabitButton.isHidden = false
+        deleteHabitButton.isHidden = false
+        editEntryButton.isHidden = true
+        
+    }
+    
+    @IBAction func doneEditingHabitButtonPressed(_ sender: CircleButtons) {
+        
+        doneEditingHabitButton.isHidden = true
+        deleteHabitButton.isHidden = true
+        editEntryButton.isHidden = false
+    }
+    
+    @IBAction func deleteHabitButtonPressed(_ sender: Any) {
+    }
 
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -112,6 +152,8 @@ class HabitDetailsVC: UIViewController {
     }
     */
     
+    
+    // MARK: - Pre-CoreData Testing Functions
     
     func generateTestData() {
         

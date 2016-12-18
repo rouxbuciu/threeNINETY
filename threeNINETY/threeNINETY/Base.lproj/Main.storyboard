@@ -818,7 +818,7 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-4Z-uWK" userLabel="Bottom Buttons">
-                                        <rect key="frame" x="124" y="487" width="127" height="55"/>
+                                        <rect key="frame" x="52" y="487" width="271" height="55"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-21-CAL" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
@@ -840,6 +840,33 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                                                     <constraint firstAttribute="width" constant="55" id="qNq-nB-XP8"/>
                                                 </constraints>
                                                 <state key="normal" image="Edit"/>
+                                                <connections>
+                                                    <action selector="editButtonPressed:" destination="gSX-mB-Cju" eventType="touchUpInside" id="unU-J0-VHu"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFA-Fe-9bW" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                                <rect key="frame" x="144" y="0.0" width="55" height="55"/>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="dmA-MI-tVE"/>
+                                                    <constraint firstAttribute="width" constant="55" id="lwQ-Et-wvl"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkmark"/>
+                                                <connections>
+                                                    <action selector="doneEditingHabitButtonPressed:" destination="gSX-mB-Cju" eventType="touchUpInside" id="XjN-xC-t2f"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-ol-lSL" customClass="CircleButtons" customModule="threeNINETY" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="55" height="55"/>
+                                                <color key="backgroundColor" red="0.1215686275" green="0.38823529410000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="3zd-bU-ZuB"/>
+                                                    <constraint firstAttribute="width" constant="55" id="Uz7-BM-4Rf"/>
+                                                </constraints>
+                                                <state key="normal" image="Trash"/>
+                                                <connections>
+                                                    <action selector="deleteHabitButtonPressed:" destination="gSX-mB-Cju" eventType="touchUpInside" id="czD-gU-Z5A"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1423,6 +1450,9 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteHabitButton" destination="GDe-ol-lSL" id="NYw-c1-cc1"/>
+                        <outlet property="doneEditingHabitButton" destination="SFA-Fe-9bW" id="GWJ-Tr-9Pa"/>
+                        <outlet property="editEntryButton" destination="uHL-Od-3p9" id="mJA-Rv-GFF"/>
                         <outlet property="habitTitleLabel" destination="Lqo-rc-W0u" id="h6k-MU-RUS"/>
                     </connections>
                 </viewController>
@@ -1432,10 +1462,12 @@ threeNINETY © 2016 Roux G. Buciu/ACME Labs</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Checkmark" width="50" height="50"/>
         <image name="Edit" width="30" height="30"/>
         <image name="Left" width="50" height="50"/>
         <image name="MenuButton" width="50" height="50"/>
         <image name="Plus" width="50" height="50"/>
+        <image name="Trash" width="50" height="50"/>
         <image name="logo-for-background" width="624" height="330"/>
     </resources>
     <inferredMetricsTieBreakers>
