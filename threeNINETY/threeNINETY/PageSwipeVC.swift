@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate {
     
+    // MARK: - 
     lazy var VCArray: [UIViewController] = {
         return [self.VCInstance(name: "HabitTrackerVC"),
                 self.VCInstance(name: "HabitListVC")]
@@ -20,6 +21,8 @@ class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVie
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
     }
     
+    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +46,10 @@ class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVie
             }
         }
     }
-    
-    
+}
+
+
+extension PageSwipeVC: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -65,6 +70,7 @@ class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVie
         return VCArray[previousIndex]
     }
     
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let viewControllerIndex = VCArray.index(of: viewController) else {
@@ -82,14 +88,15 @@ class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVie
         }
         
         return VCArray[nextIndex]
-        
     }
+    
     
     public func presentationCount(for pageViewController: UIPageViewController) -> Int {
         
+        // The number of items reflected in the page indicator.
         return VCArray.count
-        
-    }// The number of items reflected in the page indicator.
+    }
+    
     
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         
@@ -99,7 +106,6 @@ class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVie
         }
         
         return firstViewControllerIndex
-        
     }
     
 }
