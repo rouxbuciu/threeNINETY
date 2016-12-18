@@ -15,7 +15,7 @@ class HabitListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIButton!
 
-    var testArray = ["ItemOne", "itemTwo", "ItemThree"]
+    var testArray = ["Don't Smoke", "Practice Trombone", "Exercise"]
     
     
     // MARK: - View Life Cycle
@@ -41,7 +41,6 @@ class HabitListVC: UIViewController {
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "HabitDetailsVC" {
@@ -90,8 +89,8 @@ extension HabitListVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        let item = testArray[indexPath.row]
+        let item: String!
+        item = testArray[indexPath.row]
         performSegue(withIdentifier: "HabitDetailsVC", sender: item)
         tableView.deselectRow(at: indexPath, animated: true)
     }
