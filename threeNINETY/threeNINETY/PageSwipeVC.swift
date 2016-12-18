@@ -11,7 +11,7 @@ import UIKit
 
 class PageSwipeVC: UIPageViewController, UIPageViewControllerDelegate {
     
-    // MARK: - 
+    // MARK: -
     lazy var VCArray: [UIViewController] = {
         return [self.VCInstance(name: "HabitTrackerVC"),
                 self.VCInstance(name: "HabitListVC")]
